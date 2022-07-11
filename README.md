@@ -16,3 +16,27 @@ Program.cs file is where:
   - AddSingleton -> existuje po celou dobu běhu aplikace = využívá resources
   - AddScoped    -> existuje po dobu http requestu, nová instance je vytvořena pro každý request, vhodné pro API controller
   - AddTransient -> service je vytvořen a zničen jakmile je metoda u konce, není vhodné pro http requesty
+
+<h2>Middleware</h2>
+
+- the request handling pipeline is composed of a series of middleware components
+- each component performs an operation on <b>HttpContext</b> and either invokens the next middleware in the pipeline or terminates the request
+- by convetion middleware is added to the pipeline by invoking a "Use{Feature}" extension method
+
+example middleware:
+
+- app.UseHttpsRedirection();
+- app.UseStaticFiles();
+- app.UseAuthorization();
+
+<h2>Host</h2>
+
+- on startup, aspnetcore build a host
+- host encapsulate all of the apps resources such as:
+  - http server implementation
+  - middleware components
+  - logging
+  - dependency injection
+  - configuration
+  
+TBC
