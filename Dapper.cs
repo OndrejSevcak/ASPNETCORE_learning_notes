@@ -1,5 +1,5 @@
 ExecuteAsync()  -> executed a command one or multiple times and returns number of afected rows
-                -> for inserts, updates..
+                -> for inserts, updates or stored procedures, that does not return a value!
 
 QueryAsync()    -> executes a query and maps results
                 -> for querying data
