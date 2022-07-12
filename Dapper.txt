@@ -1,0 +1,8 @@
+ExecuteAsync()  -> executed a command one or multiple times and returns number of afected rows
+                -> for inserts, updates..
+
+QueryAsync()    -> executes a query and maps results
+                -> for querying data
+                
+                
+More: https://dapper-tutorial.net/async#queryasync
